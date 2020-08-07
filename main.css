@@ -11,7 +11,7 @@
 body{
   background: var(--background-color, white); /*Using the variable, with a browser fallback*/
 }
-.divito{
+.div_ito{
   padding-top: 2%;
 }
 nav{
