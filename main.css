@@ -1,15 +1,18 @@
 :root{ /* :root - pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
   
-  --background-color: #3a405a; /*custom CSS variable*/
-  --nav-bar: #8d99ae;
+  --background-color: #02131E; /*custom CSS variable*/
+  --nav-bar: #FF8F17;
+  --welcome-section: #FF8F17;
   --nav-shadow: #f4acb7;
   --footer: #292F4B;
   --dark-background: #f19c79;
   --light-background: #292F4B;
   --contacts: #335c67;
+  --body-elements: #F5A589;
 }
 body{
   background: var(--background-color, white); /*Using the variable, with a browser fallback*/
+  
 }
 .divito{
   padding-top: 2%;
@@ -17,7 +20,7 @@ body{
 nav{
             position: fixed;
             left: 20px;
-            width: calc(100% - 65px);/* stretches across the window- right */
+            width: calc(100% - 65px);/* stretches across the window- right */ 
             margin: 0 auto;
             padding: 10px 0;
             background: var(--nav-bar);
@@ -34,20 +37,23 @@ nav{
             text-align: left;
  }
 .menu-area a {
-            color: #fff;
+            color: var(--background-color);
             font-weight: 300;
             letter-spacing: 1px;
             text-transform: uppercase;
             display: block;
-            padding: 0 25px;
-            font-size: 14px;
+            padding: 3px 25px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            font-weight: bold;
             line-height: 30px;
             position: relative;
             z-index: 1;
  }
 .menu-area a:hover {
-            background: #333;
-            color: #fff;
+            background: var(--background-color);
+            color: var(--nav-bar);
+            font-weight: bold;
 }
 .menu-area a:hover:after {
             transform: translateY(-50%) rotate(-35deg);
@@ -80,52 +86,51 @@ nav:before {
             right: 0;
  }
 #welcome-section{
-  font-family: Lobster;
-  text-align: center;
-  color: #f19c79;
+  text-align: left;
+  color: var(--welcome-section);
   line-height: .001;
-  padding-top: 5em;
+  padding-top: 20em;
   padding-bottom: 5em;
+  padding-left: 60px;
+  height: 600px;
 }
-#pix{
+#line1{
   font-family:  Poiret One;
-  text-align: center;
-  font-size: 3em;
-  line-height: .001;
+  font-size: 600%;
+  /*line-height: .001;*/
   margin-top: 1.5em;
 }
-#this{
-  font-family: 'Lato', sans-serif;
+#line2{
+  font-family: 'Poppins', sans-serif;
+  font-weight: normal;
+  font-style: italic;
   font-size: 1.2em;
   text-shadow: 2px 2px 8px #5E6682;
   line-height: 100%;
   color: #F5A589 !important;
 }
-#about{
-  background-color: #ffcad4;
+.section{
+  background: var(--body-elements);
   padding-top: 1em;
   text-align: center;
-  color: var(--light-background);
+  color: var(--background-color);
   font-size: 1.3em;
   padding-bottom: 5em;
   margin: 40px;
 }
-.aboutTitle{
-  color: var(--light-background);
+.title{
+  color: var(--background-color);
   font-family: Poiret One;
   font-size: 2.5em;
   text-align: center;
 }
-.aboutContent{
-  font-size: 1em;
-}
-p{
+.sub{
   padding: 1em;
   margin-left: 3em;
   margin-right: 3em;
   line-height: 1.5;
   font-size: 1em;
-  font-family: 'Merriweather', serif;
+  font-family: 'Poppins', sans-serif;
 }
 #projectTitle{
   color: var(--dark-background);
@@ -138,6 +143,7 @@ p{
 /* Project Section */
 .projects-grid {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 4rem;
   width: 100%;
@@ -157,7 +163,7 @@ p{
 }
 
 .project {
-  background: #543864;
+  background: var(--nav-bar);
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   border-radius: 3px;
   border-style: hidden; /*border-style: none, dotted, dashed, groove, solid, double, ridge, hidden, inset, outset */
@@ -166,99 +172,62 @@ p{
 }
 
 .project-image {
-  height: calc(100% - 6.8rem);
+  /*height: calc(100% - 6.8rem);*/
+  height: 300px;
   width: 100%;
   object-fit: cover;
 }
 
 .project-title {
-  font-size: 2rem;
-  padding: .05em;
-  color: #ffbd69;
-  font-family: Poiret one;
-  
+  font-size: 25px;
+  text-align: center;
+  padding: .3em;
+  color: var(--background-color);
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
 .project-title:hover {
-  color: #ff7f50;
-  transition: color 0.3s ease-out
+  color: var(--nav-bar);
+  transition: color 0.3s ease-out;
+  background: var(--background-color);
+  /*box-shadow: 0px 8px 15px var(--nav-bar);*/
 }
-#Contact{
-  background: var(--contacts);
+/*
+.Contact{
+  background: var(--body-elements);
   padding-top: 1em;
   text-align: center;
   color: white;
   font-size: 1.3em;
   padding-bottom: 5em;
 }
-#con{
+.con{
   font-size: 2rem;
   padding: .05em;
   color: #ffbd69;
   font-family: Poiret one;
-  
-}
+}*/
 footer{
-  background: var(--footer);
-  padding: 2em;
-  /* OPTIONAL - clear: both; */ 
+  font-family: 'Poppins', sans-serif;
+  color: var(--nav-bar); 
+  border-top: solid 2px var(--nav-bar);
 }
-
-
-/*DESIGN SKETCHES FIRST!!! take note of the box models(margin, border, padding, content) */
-
-/*USE INSPECT ELEMENT*/
-
-/*p.ex1 {display: none;}
-p.ex2 {display: inline;}
-p.ex3 {display: block;}
-p.ex4 {display: inline-block;}*/
-
-/* HOW TO MAKE 3 OR MORE COLUMNS? 
-
-  width:30%;
-	margin-right: 2%;
-	display:inline-block;
-	float:left;
-*/
-
-/* If an element is inline, it is not needed for it to have a width, UNLESS its inline-block, or block */
-
-
-/* STATES 
-
-a:link  --- normal/unvisited link
-a:visited  --- has been visited
-a:hover --- activated by mouse
-a:focus --- activated by keyboard (touchscreens)
-a:active  --- is being clicked
-
-a:hover MUST come after a:link and a:visited
-a:active MUST come after a:hover */
-
-
-/* 
-border: 1px solid black;
-
-short hand for: 
-
-border-width: 1px;
-border-color: black;
-border-style: solid;
-*/
-
-/*
-background: #00ff00 url("imgs/ocean.jpg") no-repeat fixed center;
-
-short hand for:
-
-background-color
-background-image
-background-repeat, and
-background-position
-*/
-
-/*
-Opacity
-If you are using a background image and it is making it hard to read the text, you can alter the opacity of the image. The opacity is how transparent the image should appear. It is similar to the idea of using rgb() colors and rgba() colors. (255,0,0) is red. (255,0,0, .5) is a more transparent red.
-*/
+footer li{
+   display: inline-block;
+   left: 0;
+   bottom: 0;
+   text-align: center;
+   list-style: none;
+   margin-left: 30px;
+   margin-right: 30px;
+}
+footer li a{
+   font-family: 'Poppins', sans-serif;
+   color: var(--nav-bar); 
+   text-decoration: none;
+}
+footer li a:hover{
+   color: var(--nav-bar); 
+}
