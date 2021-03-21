@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/*font-family: 'Poppins', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+/*font-family:  Poiret One;*/
 :root{ /* :root - pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
   
   --background-color: #02131E; /*custom CSS variable*/
@@ -85,7 +89,7 @@ nav:before {
             top: 100%;
             right: 0;
  }
-#welcome-section{
+/*#welcome-section{
   text-align: left;
   color: var(--welcome-section);
   line-height: .001;
@@ -94,11 +98,45 @@ nav:before {
   padding-left: 60px;
   height: 600px;
 }
-#line1{
-  font-family:  Poiret One;
-  font-size: 600%;
+*/
+#welcome-section{
+  padding-top: 40vh;
+  padding-bottom: 5em;
+  padding-left: 60px;
+  height: 600px;
+}
+.text-typing{
+  font-family: 'Poppins', sans-serif;
+  font-size: 400%;
+  font-weight: 700;
   /*line-height: .001;*/
   margin-top: 1.5em;
+}
+.text-typing{
+  color: var(--nav-bar);
+}
+.text-typing h2 {
+  margin:0px;
+  white-space:nowrap;
+  overflow:hidden;
+  animation:typing 6s steps(25,end) forwards infinite,
+            blink 1s infinite;
+}
+@keyframes typing {
+  0% { 
+    width:0% 
+  }
+  100% { 
+    width:60% 
+  }
+}
+@keyframes blink {
+  0%,100% {
+    border-right:2px solid transparent;
+  }
+  50% {
+    border-right:2px solid var(--nav-bar);
+  }
 }
 #line2{
   font-family: 'Poppins', sans-serif;
