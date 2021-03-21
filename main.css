@@ -228,6 +228,6 @@ footer li a{
    color: var(--nav-bar); 
    text-decoration: none;
 }
-footer li a:hover{
+footer li:hover{
    color: #FFAF58; 
 }
