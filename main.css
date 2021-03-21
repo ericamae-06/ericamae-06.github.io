@@ -199,22 +199,7 @@ nav:before {
   background: var(--body-elements);
   padding-top: 1em;
   text-align: center;
-  color: white;
-  font-size: 1.3em;
-  padding-bottom: 5em;
-}
-.con{
-  font-size: 2rem;
-  padding: .05em;
-  color: #ffbd69;
-  font-family: Poiret one;
-}*/
-footer{
-  font-family: 'Poppins', sans-serif;
-  color: var(--nav-bar); 
-  border-top: solid 2px var(--nav-bar);
-}
-footer li{
+  co
    display: inline-block;
    left: 0;
    bottom: 0;
