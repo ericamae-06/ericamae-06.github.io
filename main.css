@@ -2,9 +2,8 @@
 /*font-family: 'Poppins', sans-serif;*/
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 /*font-family:  Poiret One;*/
-:root{ /* :root - pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
-  
-  --background-color: #02131E; /*custom CSS variable*/
+:root{
+  --background-color: #02131E; 
   --nav-bar: #FF8F17;
   --welcome-section: #FF8F17;
   --nav-shadow: #f4acb7;
@@ -15,7 +14,7 @@
   --body-elements: #F5A589;
 }
 body{
-  background: var(--background-color, white); /*Using the variable, with a browser fallback*/
+  background: var(--background-color, white); 
   
 }
 .divito{
@@ -24,16 +23,16 @@ body{
 nav{
             position: fixed;
             left: 20px;
-            width: calc(100% - 65px);/* stretches across the window- right */ 
+            width: calc(100% - 65px);
             margin: 0 auto;
             padding: 10px 0;
             background: var(--nav-bar);
-            z-index: 1; /* z-index: auto|(1 or -1)|initial|inherit @mapapaltan yung position ng element, top or bottom keme*/
+            z-index: 1; 
             text-align: center;
             padding-right: 2%;
  }
 .logo {
-            width: 15%; /* Could also be thin, medium, or large*/
+            width: 15%; 
             float: left;
             text-transform: uppercase;
             color: #fff;
@@ -89,16 +88,6 @@ nav:before {
             top: 100%;
             right: 0;
  }
-/*#welcome-section{
-  text-align: left;
-  color: var(--welcome-section);
-  line-height: .001;
-  padding-top: 20em;
-  padding-bottom: 5em;
-  padding-left: 60px;
-  height: 600px;
-}
-*/
 #welcome-section{
   padding-top: 40vh;
   padding-bottom: 5em;
@@ -109,7 +98,6 @@ nav:before {
   font-family: 'Poppins', sans-serif;
   font-size: 400%;
   font-weight: 700;
-  /*line-height: .001;*/
   margin-top: 1.5em;
 }
 .text-typing{
@@ -204,13 +192,12 @@ nav:before {
   background: var(--nav-bar);
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   border-radius: 3px;
-  border-style: hidden; /*border-style: none, dotted, dashed, groove, solid, double, ridge, hidden, inset, outset */
+  border-style: hidden; 
   border-width: 0px;
-  margin: 6px; /*positive - right,down / negative - left,upward*/
+  margin: 6px; 
 }
 
 .project-image {
-  /*height: calc(100% - 6.8rem);*/
   height: 300px;
   width: 100%;
   object-fit: cover;
@@ -230,23 +217,7 @@ nav:before {
   color: var(--nav-bar);
   transition: color 0.3s ease-out;
   background: var(--background-color);
-  /*box-shadow: 0px 8px 15px var(--nav-bar);*/
 }
-/*
-.Contact{
-  background: var(--body-elements);
-  padding-top: 1em;
-  text-align: center;
-  color: white;
-  font-size: 1.3em;
-  padding-bottom: 5em;
-}
-.con{
-  font-size: 2rem;
-  padding: .05em;
-  color: #ffbd69;
-  font-family: Poiret one;
-}*/
 footer{
   font-family: 'Poppins', sans-serif;
   color: var(--nav-bar); 
