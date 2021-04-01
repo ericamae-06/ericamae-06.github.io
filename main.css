@@ -201,6 +201,10 @@ nav:before {
   .sub{
     text-align: justify;
   }
+
+  .title{
+    font-size: 1.5em;
+  }
   
   footer li{
     display: inline-block;
