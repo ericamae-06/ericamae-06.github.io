@@ -205,16 +205,16 @@ nav:before {
   footer li{
     display: inline-block;
     font-size: 12px;
-    margin-left: 2px;
     margin-right: 2px;
+    width: 20px;
   }
   
   footer {
-    margin: 0 auto;
+    padding-left: -90px;
   }
   
   footer ul {
-    padding: -90px;
+    padding-left: -90px;
   }
 
   
